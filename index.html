@@ -798,7 +798,9 @@ header.scrolled .dtg-menu-toggle span{
 
                     <a href="#services-detail" class="about-link">
                         Explore our services
-                        <span>↗</span>
+                        <span><svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
                     </a>
 
                 </div>
@@ -938,7 +940,9 @@ window.addEventListener("scroll",()=>{
 <h2>Web<br>Development</h2>
 <p class="dits-text">Modern, high-performing websites designed around your business goals, your audience, and the experiences that turn visitors into customers.</p>
 <div class="dits-tags"><span>Business Websites</span><span>Landing Pages</span><span>Responsive Design</span></div>
-<a class="dits-button" href="#work">Explore web development ↗</a>
+<a class="dits-button" href="#work">Explore web development <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
 <div class="dits-browser"><div class="dits-browser-top"><span></span><span></span><span></span></div><div class="dits-browser-content"><div class="dits-browser-line"></div><div class="dits-browser-title"></div><div class="dits-browser-text"></div><div class="dits-browser-button"></div></div></div>
 </article>
 <div class="dits-side">
@@ -947,7 +951,9 @@ window.addEventListener("scroll",()=>{
 <p class="dits-label">REACH THE RIGHT PEOPLE</p>
 <h2>Digital<br>Marketing</h2>
 <p class="dits-text">Focused campaigns and content that help your business growth.</p>
-<a class="dits-button">Explore digital marketing ↗</a>
+<a class="dits-button">Explore digital marketing <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
 <div class="dits-chart"><div class="dits-bars"><span></span><span></span><span></span><span></span><span></span></div><div class="dits-growth"><small>GROWTH</small><strong>+90%</strong></div></div>
 </article>
 <article class="dits-card dits-brand">
@@ -955,7 +961,9 @@ window.addEventListener("scroll",()=>{
 <p class="dits-label">BUILD RECOGNITION</p>
 <h2>Branding &<br>Design</h2>
 <p class="dits-text">Clear and consistent visual identities that help your business feel professional, trustworthy, and easier to remember.</p>
-<a class="dits-button">Explore branding ↗</a>
+<a class="dits-button">Explore branding <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
 </article>
 </div>
 </div>
@@ -1332,7 +1340,9 @@ I design and build clear, conversion-focused WordPress and Shopify websites that
 
 
 
-<a class="dtg-feature-link" id="dtgFeatureLink" href="#work">View related projects ↗</a>
+<a class="dtg-feature-link" id="dtgFeatureLink" href="#work">View related projects <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
 
 
 
@@ -1358,7 +1368,7 @@ I design and build clear, conversion-focused WordPress and Shopify websites that
 
 data-title="Website Design & Development"
  data-link="#work"
- data-link-text="View website projects ↗"
+ data-link-text="View website projects"
 
 data-text="I design and build clear, conversion-focused WordPress and Shopify websites that are easy to use, maintain, and designed around your business goals."
 
@@ -1390,7 +1400,7 @@ Website Design & Development
 
 data-title="Graphic Design"
  data-link="#contact"
- data-link-text="View design projects ↗"
+ data-link-text="View design projects"
 
 data-text="I create clean digital graphics for websites, campaigns, social media, and marketing materials that strengthen your brand identity."
 
@@ -1422,7 +1432,7 @@ Graphic Design
 
 data-title="Email Marketing"
  data-link="#contact"
- data-link-text="Discuss email marketing ↗"
+ data-link-text="Discuss email marketing"
 
 data-text="I build email campaigns and simple automations that help businesses stay connected with customers and improve engagement."
 
@@ -1454,7 +1464,7 @@ Email Marketing
 
 data-title="Workflow Automations"
  data-link="#contact"
- data-link-text="Discuss automation ↗"
+ data-link-text="Discuss automation"
 
 data-text="I create practical systems that reduce repeated work, improve reporting, and help businesses save time."
 
@@ -1486,7 +1496,7 @@ Workflow Automations
 
 data-title="Social Media Management"
  data-link="#contact"
- data-link-text="Discuss social media ↗"
+ data-link-text="Discuss social media"
 
 data-text="I help businesses organise and publish useful content so their online presence stays consistent and active."
 
@@ -1518,7 +1528,7 @@ Social Media Management
 
 data-title="Admin & Digital Support"
  data-link="#contact"
- data-link-text="Discuss digital support ↗"
+ data-link-text="Discuss digital support"
 
 data-text="I provide ongoing digital support including website updates, content management, and daily online tasks."
 
@@ -1568,6 +1578,9 @@ const dtgTitle = document.getElementById("dtgFeatureTitle");
 
 const dtgText = document.getElementById("dtgFeatureText");
 const dtgFeatureLink = document.getElementById("dtgFeatureLink");
+const dtgArrowIcon = `<svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
 
 
 
@@ -1607,7 +1620,7 @@ row.addEventListener("click",()=>{
         dtgText.textContent = row.dataset.text;
         if(dtgFeatureLink){
             dtgFeatureLink.href = row.dataset.link || "#contact";
-            dtgFeatureLink.textContent = row.dataset.linkText || "Explore service ↗";
+            dtgFeatureLink.innerHTML = row.dataset.linkText || `Explore service ${dtgArrowIcon}`;
         }
 
 
@@ -1693,7 +1706,9 @@ An engaging digital experience designed to help users discover and explore.
 </p>
 
 <a href="https://jigsawdiscovery.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1719,7 +1734,9 @@ A mortgage matching platform connecting customers with suitable home loan expert
 </p>
 
 <a href="https://findmyshoehouse.com.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1746,7 +1763,9 @@ A professional IT services website built to showcase technology solutions for bu
 </p>
 
 <a href="https://levelsit.com.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1773,7 +1792,9 @@ A modern digital presence focused on social media and online growth solutions.
 </p>
 
 <a href="https://alltoosocial.vercel.app/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1801,7 +1822,9 @@ A technology-focused business website designed for professional digital solution
 </p>
 
 <a href="https://alliedx.com.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1829,7 +1852,9 @@ A professional accounting and advisory website built to strengthen trust and cre
 </p>
 
 <a href="https://www.callaughanpartners.com.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1857,7 +1882,9 @@ A service-focused website designed to generate enquiries and showcase expertise.
 </p>
 
 <a href="https://prolecelectricalinnovations.com.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -1885,7 +1912,9 @@ A digital mortgage solution designed to simplify the lending journey and connect
 </p>
 
 <a href="https://homelendsolutions.com.au/" target="_blank">
-Visit Website ↗
+Visit Website <svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 </a>
 
 </div>
@@ -2944,9 +2973,11 @@ updates, and digital solutions after launch.
                 </label>
 
                 <button type="submit">
-                    <span>Send Project Enquiry</span>
-                    <span aria-hidden="true">↗</span>
-                </button>
+<span>Send Project Enquiry</span>
+<svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</button>
 
                 <p class="dits-form-note">
                     Clicking the button opens a prepared email in a new tab.
@@ -4005,7 +4036,9 @@ html{
     }
 
     .dtg-mobile-menu a::after{
-        content:"↗";
+        content:"<svg class="dtg-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>";
         font-size:18px;
         font-weight:500;
     }
@@ -5008,3 +5041,33 @@ html{
     });
 })();
 </script>
+
+<style>
+/* Professional CTA arrow icon */
+.dtg-arrow-icon{
+    width:1em;
+    height:1em;
+    display:inline-block;
+    vertical-align:-0.14em;
+    flex:0 0 auto;
+    transition:transform .25s ease;
+}
+a:hover .dtg-arrow-icon,
+button:hover .dtg-arrow-icon{
+    transform:translate(3px,-3px);
+}
+.about-link,
+.dits-button,
+.dtg-feature-link,
+.dits-work-card a,
+.dits-contact-form button{
+    align-items:center;
+    gap:8px;
+}
+.about-link,
+.dits-button,
+.dtg-feature-link,
+.dits-work-card a{
+    display:inline-flex;
+}
+</style>
