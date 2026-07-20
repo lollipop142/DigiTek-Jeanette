@@ -2810,8 +2810,8 @@ updates, and digital solutions after launch.
                     <span class="dits-contact-icon">01</span>
                     <div>
                         <strong>Email</strong>
-                        <a href="mailto:hello@digiteksolutions.com">
-                            hello@digiteksolutions.com
+                        <a href="mailto:jeanetteferrater14@gmail.com">
+                            jeanetteferrater14@gmail.com
                         </a>
                     </div>
                 </div>
@@ -2949,8 +2949,8 @@ updates, and digital solutions after launch.
                 </button>
 
                 <p class="dits-form-note">
-                    Clicking the button opens your email app with a completed message.
-                    Review it, then press Send.
+                    Clicking the button opens a prepared email in a new tab.
+                    Gmail and Outlook addresses are opened in their matching webmail service.
                 </p>
 
             </form>
@@ -4928,11 +4928,12 @@ html{
 }
 </style>
 
+
+
 <script>
-/* DIGITEK MAILTO CONTACT FORM */
+/* DIGITEK WEBMAIL CONTACT FORM */
 (function () {
     const form = document.getElementById("digitekContactForm");
-
     if (!form) return;
 
     form.addEventListener("submit", function (event) {
@@ -4944,12 +4945,13 @@ html{
         }
 
         const name = document.getElementById("contactName")?.value.trim() || "";
-        const email = document.getElementById("contactEmail")?.value.trim() || "";
+        const senderEmail = document.getElementById("contactEmail")?.value.trim() || "";
         const company = document.getElementById("contactCompany")?.value.trim() || "Not provided";
         const service = document.getElementById("contactService")?.value || "Not selected";
         const budget = document.getElementById("contactBudget")?.value || "Not selected";
         const message = document.getElementById("contactMessage")?.value.trim() || "";
 
+        const recipient = "jeanetteferrater14@gmail.com";
         const subject = `New DigiTek Project Enquiry — ${service}`;
 
         const body = [
@@ -4958,7 +4960,7 @@ html{
             "I would like to enquire about a project with DigiTek Solutions.",
             "",
             `Name: ${name}`,
-            `Email: ${email}`,
+            `Email: ${senderEmail}`,
             `Company: ${company}`,
             `Service needed: ${service}`,
             `Estimated budget: ${budget}`,
@@ -4971,12 +4973,38 @@ html{
             "Thank you."
         ].join("\n");
 
-        const mailto =
-            "mailto:hello@digiteksolutions.com" +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(body);
+        const domain = (senderEmail.split("@")[1] || "").toLowerCase();
+        let composeUrl;
 
-        window.location.href = mailto;
+        if (domain === "gmail.com" || domain === "googlemail.com") {
+            composeUrl =
+                "https://mail.google.com/mail/?view=cm&fs=1" +
+                "&to=" + encodeURIComponent(recipient) +
+                "&su=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+        } else if (
+            domain === "outlook.com" ||
+            domain === "hotmail.com" ||
+            domain === "live.com" ||
+            domain === "msn.com"
+        ) {
+            composeUrl =
+                "https://outlook.live.com/mail/0/deeplink/compose" +
+                "?to=" + encodeURIComponent(recipient) +
+                "&subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+        } else {
+            composeUrl =
+                "mailto:" + recipient +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+        }
+
+        const newTab = window.open(composeUrl, "_blank", "noopener,noreferrer");
+
+        if (!newTab) {
+            window.location.href = composeUrl;
+        }
     });
 })();
 </script>
