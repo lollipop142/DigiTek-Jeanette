@@ -1,0 +1,4982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital IT Partners</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:#5b7fd6;
+    color:white;
+    overflow-x:hidden;
+}
+/* ===========================
+   HEADER
+=========================== */
+
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+
+    width:100%;
+
+    height:105px;
+
+
+    padding:0 7%;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+    background:#5b7fd6;
+
+
+    border-bottom:1px solid rgba(255,255,255,.45);
+
+
+    transition:
+    background .35s ease,
+    border .35s ease;
+
+}
+
+
+
+/* LOGO */
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:8px;
+
+    padding-bottom:8px;
+
+}
+
+
+
+.logo img{
+
+
+    width:150px;
+
+
+    height:auto;
+
+
+    display:block;
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+
+/* WHITE LOGO ON HERO */
+
+
+header:not(.scrolled) .logo img{
+
+
+    filter:
+
+    brightness(0)
+
+    invert(1);
+
+
+}
+
+
+
+
+
+/* NAVIGATION */
+
+
+nav{
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    gap:45px;
+
+
+}
+
+
+
+nav a{
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-size:15px;
+
+
+    font-weight:600;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+
+nav a:hover{
+
+
+    color:#b8ff9c;
+
+
+}
+
+
+
+
+/* BUTTON */
+
+
+.button-outline{
+
+
+    padding:15px 32px;
+
+
+    border:1px solid white;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+
+
+.button-outline:hover{
+
+
+    background:white;
+
+
+    color:#082b47;
+
+
+}
+
+
+
+
+
+
+/* ===========================
+   SCROLLED HEADER
+=========================== */
+
+
+
+header.scrolled{
+
+
+    background:white;
+
+
+    border-bottom:1px solid #e4e9f2;
+
+
+}
+
+
+
+
+
+header.scrolled nav a{
+
+
+    color:#082b47;
+
+
+}
+
+
+
+
+
+header.scrolled nav a:hover{
+
+
+    color:#5b7fd6;
+
+
+}
+
+
+
+
+
+header.scrolled .button-outline{
+
+
+    border-color:#082b47;
+
+
+}
+
+
+
+
+
+header.scrolled .button-outline:hover{
+
+
+    background:#082b47;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+/* RETURN ORIGINAL LOGO COLOR */
+
+
+header.scrolled .logo img{
+
+
+    filter:none;
+
+
+}
+
+
+
+
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+
+@media(max-width:900px){
+
+
+header{
+
+
+    height:80px;
+
+
+    padding:0 25px;
+
+
+}
+
+
+
+
+.logo img{
+
+
+    width:125px;
+
+
+}
+
+
+
+nav{
+
+
+    display:none;
+
+
+}
+
+
+
+}
+.hero{
+    width:85%;
+    min-height:100vh;
+    margin:auto;
+    padding-top:90px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.content{
+    width:100%;
+    max-width:1200px;
+}
+
+h1{
+    font-family:Anton,sans-serif;
+    font-size:clamp(70px,8vw,125px);
+    font-weight:400;
+    line-height:1;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+}
+
+.green{
+    color:#b8ff9c;
+}
+
+.description{
+    max-width:700px;
+    margin:45px auto 0;
+
+    font-size:20px;
+    line-height:1.7;
+    color:#e7edff;
+}
+
+.cta{
+    margin-top:45px;
+}
+
+.btn{
+    display:inline-block;
+    padding:20px 45px;
+
+    background:white;
+    color:#12365c;
+
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:700;
+
+    transition:.25s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+    min-height:100vh;
+    padding:150px 7%;
+    background:#ffffff;
+    color:#082b47;
+    scroll-margin-top:90px;
+}
+
+.about-inner{
+    max-width:1500px;
+    margin:auto;
+}
+
+.about-label{
+    margin-bottom:45px;
+
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2.5px;
+    color:#5b7fd6;
+}
+
+.about-statement{
+    max-width:1450px;
+
+    font-family:Inter,sans-serif;
+    font-size:clamp(42px,4.3vw,78px);
+    font-weight:400;
+    line-height:1.16;
+    letter-spacing:-3.5px;
+}
+
+.about-highlight{
+    color:#5b7fd6;
+}
+
+.about-bottom{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:80px;
+
+    margin-top:75px;
+    padding-top:40px;
+
+    border-top:1px solid #dce3ec;
+}
+
+.about-copy{
+    max-width:760px;
+
+    font-size:19px;
+    line-height:1.75;
+    color:#496276;
+}
+
+.about-link{
+    flex-shrink:0;
+
+    display:inline-flex;
+    align-items:center;
+    gap:20px;
+
+    padding-bottom:8px;
+
+    color:#082b47;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:700;
+
+    border-bottom:1px solid #082b47;
+    transition:.25s ease;
+}
+
+.about-link span{
+    font-size:21px;
+    transition:.25s ease;
+}
+
+.about-link:hover{
+    color:#5b7fd6;
+    border-color:#5b7fd6;
+}
+
+.about-link:hover span{
+    transform:translate(4px,-4px);
+}
+
+/* SERVICES PLACEHOLDER */
+
+.services-section{
+    min-height:100vh;
+    padding:150px 7%;
+    background:#b8ff9c;
+    color:#082b47;
+    scroll-margin-top:90px;
+}
+
+.services-section h2{
+    max-width:1000px;
+    font-size:clamp(48px,6vw,90px);
+    font-weight:500;
+    line-height:1.05;
+    letter-spacing:-4px;
+}
+
+/* CONTACT PLACEHOLDER */
+
+.contact-section{
+    min-height:70vh;
+    padding:150px 7%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#082b47;
+    color:white;
+    text-align:center;
+
+    scroll-margin-top:90px;
+}
+
+.contact-section h2{
+    max-width:1000px;
+    font-size:clamp(48px,6vw,90px);
+    font-weight:500;
+    line-height:1.05;
+    letter-spacing:-4px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        height:75px;
+        padding:0 22px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        width:90%;
+        min-height:100vh;
+        padding-top:75px;
+    }
+
+    h1{
+        font-size:clamp(55px,16vw,78px);
+        line-height:1.03;
+    }
+
+    .description{
+        margin-top:35px;
+        font-size:17px;
+    }
+
+    .btn{
+        padding:18px 30px;
+    }
+
+    .about-section{
+        padding:100px 25px;
+        scroll-margin-top:75px;
+    }
+
+    .about-label{
+        margin-bottom:30px;
+    }
+
+    .about-statement{
+        font-size:clamp(36px,10vw,55px);
+        line-height:1.12;
+        letter-spacing:-2px;
+    }
+
+    .about-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:35px;
+
+        margin-top:50px;
+    }
+
+    .about-copy{
+        font-size:17px;
+    }
+
+    .services-section,
+    .contact-section{
+        padding:100px 25px;
+        scroll-margin-top:75px;
+    }
+}
+/* ==========================
+   MOBILE MENU ICON
+========================== */
+
+
+.dtg-menu-toggle{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:7px;
+
+    cursor:pointer;
+
+}
+
+
+
+.dtg-menu-toggle span{
+
+    display:block;
+
+    height:2px;
+
+    background:white;
+
+    width:28px;
+
+    transition:.3s ease;
+
+}
+
+
+/* SCROLLED HEADER */
+
+header.scrolled .dtg-menu-toggle span{
+
+    background:#082b47;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.dtg-menu-toggle{
+
+    display:flex;
+
+}
+
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="digitech-logo.png" alt="Digitech Solution Logo">
+</div>
+
+
+<nav>
+
+    <a href="#about">ABOUT</a>
+
+    <a href="#services-detail">SERVICES</a>
+
+    <a href="#work">OUR WORK</a>
+
+    <a href="#why">WHY US</a>
+
+    <a href="#contact" class="button-outline">
+        GET STARTED
+    </a>
+
+</nav>
+
+
+<!-- MOBILE MENU ICON -->
+
+<button class="dtg-menu-toggle" id="dtgMenuToggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-controls="dtgMobileMenu"
+    aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="dtg-mobile-menu" id="dtgMobileMenu" aria-hidden="true">
+    <a href="#about">ABOUT</a>
+    <a href="#services-detail">SERVICES</a>
+    <a href="#work">OUR WORK</a>
+    <a href="#why">WHY US</a>
+    <a href="#contact" class="dtg-mobile-cta">GET STARTED</a>
+</div>
+
+
+</header>
+<section class="hero">
+    <div class="content">
+
+        <h1>
+            SMART<br>
+            DIGITAL<br>
+            <span class="green">SOLUTIONS</span>
+        </h1>
+
+        <p class="description">
+            We create modern websites, digital experiences, and marketing
+            solutions that help businesses build a stronger online presence
+            and achieve meaningful growth.
+        </p>
+
+        <div class="cta">
+            <a href="#contact" class="btn">
+                BOOK A STRATEGY CALL
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="about-section" id="about">
+    <div class="about-inner">
+
+        <p class="about-label">
+            ABOUT DIGITEK SOLUTIONS
+        </p>
+
+        <div class="about-founder-layout">
+
+            <div class="about-founder-copy">
+
+                <h2 class="about-statement">
+                    DigiTek Solutions helps businesses build a stronger digital
+                    presence through thoughtful strategy, modern technology, and
+                    <span class="about-highlight">creative digital solutions.</span>
+                </h2>
+
+                <p class="about-intro">
+                    We create websites, digital systems, visual content, and online
+                    experiences designed to make businesses look professional,
+                    connect with the right audience, and grow with confidence.
+                </p>
+
+                <div class="about-founder-note">
+
+                    <p class="about-founder-kicker">
+                        MEET THE FOUNDER
+                    </p>
+
+                    <h3>
+                        Built with a practical, business-focused approach.
+                    </h3>
+
+                    <p>
+                        DigiTek Solutions was founded by Jeanette Ferrater, an IT professional
+                        and Bachelor of Science in Information Technology degree holder.
+                        She combines technical knowledge, creative design, and practical
+                        digital experience to help businesses build professional websites,
+                        improve their online presence, and create solutions that support
+                        long-term growth.
+                    </p>
+
+                    <a href="#services-detail" class="about-link">
+                        Explore our services
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-founder-visual">
+
+                <div class="about-founder-image">
+                    <img
+                        src="jeanette.jpg"
+                        alt="Jeanette Ferrater, Founder of DigiTek Solutions"
+                    >
+                </div>
+
+                <div class="about-founder-card">
+
+                    <span>FOUNDER</span>
+
+                    <strong>Jeanette Ferrater</strong>
+
+                    <p>
+                        IT Professional · BS Information Technology Degree Holder · Web Developer
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+
+const header = document.querySelector("header");
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 80){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+
+});
+
+
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital IT Partners Services</title>
+<style>
+.dits-services-section{padding:140px 7%;background:#eef2ff;color:#082b47}
+.dits-layout{max-width:1500px;margin:auto;display:grid;grid-template-columns:1.25fr .75fr;gap:24px}
+.dits-side{display:flex;flex-direction:column;gap:24px}
+.dits-card{position:relative;overflow:hidden;border-radius:32px;padding:45px}
+.dits-number{position:absolute;right:35px;top:35px;font-weight:700;opacity:.5}
+.dits-label{font-size:13px;font-weight:700;letter-spacing:3px;margin-bottom:35px}
+.dits-text{margin-top:25px;max-width:520px;font-size:18px;line-height:1.65}
+.dits-button{display:inline-block;margin-top:35px;color:inherit;text-decoration:none;font-weight:700;border-bottom:1px solid currentColor;padding-bottom:7px}
+.dits-web{min-height:780px;background:#5b7fd6;color:white}
+.dits-web h2,.dits-marketing h2,.dits-brand h2{font-size:60px;line-height:.95;letter-spacing:-4px;font-weight:500}
+.dits-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+.dits-tags span{padding:11px 18px;border:1px solid rgba(255,255,255,.5);border-radius:50px}
+.dits-marketing{height:470px;background:#b8ff9c}
+.dits-marketing .dits-text{max-width:430px;font-size:17px}
+.dits-marketing .dits-button{
+
+    position:absolute;
+
+    left:45px;
+
+    bottom:150px;
+
+}
+.dits-chart{
+
+    position:absolute;
+
+    left:25px;
+
+    right:25px;
+
+    bottom:20px;
+
+    height:110px;
+
+    background:rgba(255,255,255,.45);
+
+    border-radius:25px;
+
+}
+.dits-bars{position:absolute;bottom:20px;left:25px;display:flex;gap:14px;align-items:flex-end}
+.dits-bars span{width:20px;background:#5b7fd6;border-radius:8px 8px 0 0}
+.dits-bars span:nth-child(1){height:35px}.dits-bars span:nth-child(2){height:55px}.dits-bars span:nth-child(3){height:48px}.dits-bars span:nth-child(4){height:80px}.dits-bars span:nth-child(5){height:105px}
+.dits-growth{position:absolute;right:25px;top:20px;background:#082b47;color:white;padding:18px 28px;border-radius:18px}
+.dits-growth strong{display:block;font-size:36px}
+.dits-brand{height:420px;background:white;border:1px solid #dce4f7}
+.dits-brand .dits-text{max-width:500px}
+
+/* browser mockup */
+.dits-browser{position:absolute;right:-90px;bottom:-120px;width:650px;height:430px;background:white;border-radius:35px 35px 0 0;transform:rotate(-5deg);overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.25)}
+.dits-browser-top{height:55px;background:#edf2ff;display:flex;align-items:center;gap:10px;padding-left:25px}
+.dits-browser-top span{width:12px;height:12px;border-radius:50%;background:#5b7fd6}
+.dits-browser-content{padding:40px}
+.dits-browser-line{width:85%;height:14px;background:#dce5f5;border-radius:20px;margin-bottom:55px}
+.dits-browser-title{width:75%;height:65px;background:#082b47;border-radius:12px}
+.dits-browser-text{width:85%;height:12px;background:#cbd8ed;border-radius:20px;margin-top:35px}
+.dits-browser-button{width:150px;height:45px;background:#b8ff9c;border-radius:12px;margin-top:35px}
+@media(max-width:1000px){.dits-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section class="dits-services-section" id="services">
+<div class="dits-layout">
+<article class="dits-card dits-web">
+<div class="dits-number">01</div>
+<p class="dits-label">YOUR DIGITAL FOUNDATION</p>
+<h2>Web<br>Development</h2>
+<p class="dits-text">Modern, high-performing websites designed around your business goals, your audience, and the experiences that turn visitors into customers.</p>
+<div class="dits-tags"><span>Business Websites</span><span>Landing Pages</span><span>Responsive Design</span></div>
+<a class="dits-button" href="#work">Explore web development ↗</a>
+<div class="dits-browser"><div class="dits-browser-top"><span></span><span></span><span></span></div><div class="dits-browser-content"><div class="dits-browser-line"></div><div class="dits-browser-title"></div><div class="dits-browser-text"></div><div class="dits-browser-button"></div></div></div>
+</article>
+<div class="dits-side">
+<article class="dits-card dits-marketing">
+<div class="dits-number">02</div>
+<p class="dits-label">REACH THE RIGHT PEOPLE</p>
+<h2>Digital<br>Marketing</h2>
+<p class="dits-text">Focused campaigns and content that help your business growth.</p>
+<a class="dits-button">Explore digital marketing ↗</a>
+<div class="dits-chart"><div class="dits-bars"><span></span><span></span><span></span><span></span><span></span></div><div class="dits-growth"><small>GROWTH</small><strong>+90%</strong></div></div>
+</article>
+<article class="dits-card dits-brand">
+<div class="dits-number">03</div>
+<p class="dits-label">BUILD RECOGNITION</p>
+<h2>Branding &<br>Design</h2>
+<p class="dits-text">Clear and consistent visual identities that help your business feel professional, trustworthy, and easier to remember.</p>
+<a class="dits-button">Explore branding ↗</a>
+</article>
+</div>
+</div>
+</section>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digitech Services</title>
+
+
+<style>
+
+
+/* ===============================
+   DIGITECH SERVICES SECTION ONLY
+================================ */
+
+
+.dtg-services-wrapper{
+
+    padding:140px 7%;
+
+    background:#ffffff;
+
+    color:#082b47;
+
+}
+
+
+
+.dtg-services-container{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:.8fr 1.2fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/* ===============================
+   LEFT FEATURE
+================================ */
+
+
+.dtg-feature-box img{
+
+
+    width:100%;
+
+    height:330px;
+
+    object-fit:cover;
+
+    border-radius:0 45px 45px 45px;
+
+    transition:.45s ease;
+
+
+}
+
+
+
+.dtg-feature-box h2{
+
+
+    font-size:45px;
+
+    font-weight:500;
+
+    letter-spacing:-2.5px;
+
+    line-height:1.05;
+
+    margin-top:45px;
+
+    transition:.4s ease;
+
+
+}
+
+
+
+.dtg-feature-box p{
+
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:#536b82;
+
+    margin-top:25px;
+
+    max-width:520px;
+
+    transition:.4s ease;
+
+
+}
+
+
+
+
+.dtg-feature-link{
+
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:#082b47;
+
+    color:white;
+
+    padding:18px 38px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.dtg-feature-link:hover{
+
+
+    background:#5b7fd6;
+
+
+}
+
+
+
+
+
+/* ===============================
+   RIGHT SERVICE LIST
+================================ */
+
+
+.dtg-service-list{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+.dtg-service-row{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:35px 0;
+
+    border-bottom:1px solid #dce5f5;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+
+.dtg-service-number{
+
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#b5c0ca;
+
+    min-width:40px;
+
+    transition:.3s ease;
+
+
+}
+
+
+
+
+.dtg-service-row h3{
+
+
+    margin:0;
+
+    font-size:58px;
+
+    font-weight:500;
+
+    letter-spacing:-3px;
+
+    line-height:1;
+
+    color:#b8c3cd;
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+/* ACTIVE */
+
+
+.dtg-service-row.active .dtg-service-number{
+
+
+    color:#5b7fd6;
+
+
+}
+
+
+
+.dtg-service-row.active h3{
+
+
+    color:#082b47;
+
+
+}
+
+
+
+
+/* HOVER */
+
+
+.dtg-service-row:hover h3{
+
+
+    color:#5b7fd6;
+
+    transform:translateX(12px);
+
+
+}
+
+
+
+
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+
+@media(max-width:1000px){
+
+
+.dtg-services-container{
+
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+
+}
+
+
+
+.dtg-service-row h3{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.dtg-feature-box h2{
+
+
+    font-size:38px;
+
+
+}
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<section class="dtg-services-wrapper" id="services-detail">
+
+
+<div class="dtg-services-container">
+
+
+
+
+
+<!-- LEFT FEATURE -->
+
+
+<div class="dtg-feature-box">
+
+
+<img id="dtgFeatureImage"
+src="https://images.unsplash.com/photo-1559028012-481c04fa702d"
+alt="">
+
+
+
+<h2 id="dtgFeatureTitle">
+
+Website Design & Development
+
+</h2>
+
+
+
+
+<p id="dtgFeatureText">
+
+I design and build clear, conversion-focused WordPress and Shopify websites that are easy to use, maintain, and designed around your business goals.
+
+</p>
+
+
+
+
+<a class="dtg-feature-link" id="dtgFeatureLink" href="#work">View related projects ↗</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- SERVICES -->
+
+
+<div class="dtg-service-list">
+
+
+
+
+
+
+<div class="dtg-service-row active"
+
+data-title="Website Design & Development"
+ data-link="#work"
+ data-link-text="View website projects ↗"
+
+data-text="I design and build clear, conversion-focused WordPress and Shopify websites that are easy to use, maintain, and designed around your business goals."
+
+data-image="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+
+
+
+<span class="dtg-service-number">
+01
+</span>
+
+
+<h3>
+Website Design & Development
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-service-row"
+
+data-title="Graphic Design"
+ data-link="#contact"
+ data-link-text="View design projects ↗"
+
+data-text="I create clean digital graphics for websites, campaigns, social media, and marketing materials that strengthen your brand identity."
+
+data-image="https://images.unsplash.com/photo-1561070791-2526d30994b5">
+
+
+
+<span class="dtg-service-number">
+02
+</span>
+
+
+<h3>
+Graphic Design
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-service-row"
+
+data-title="Email Marketing"
+ data-link="#contact"
+ data-link-text="Discuss email marketing ↗"
+
+data-text="I build email campaigns and simple automations that help businesses stay connected with customers and improve engagement."
+
+data-image="https://images.unsplash.com/photo-1556761175-b413da4baf72">
+
+
+
+<span class="dtg-service-number">
+03
+</span>
+
+
+<h3>
+Email Marketing
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-service-row"
+
+data-title="Workflow Automations"
+ data-link="#contact"
+ data-link-text="Discuss automation ↗"
+
+data-text="I create practical systems that reduce repeated work, improve reporting, and help businesses save time."
+
+data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+
+
+
+<span class="dtg-service-number">
+04
+</span>
+
+
+<h3>
+Workflow Automations
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-service-row"
+
+data-title="Social Media Management"
+ data-link="#contact"
+ data-link-text="Discuss social media ↗"
+
+data-text="I help businesses organise and publish useful content so their online presence stays consistent and active."
+
+data-image="https://images.unsplash.com/photo-1611162617474-5b21e879e113">
+
+
+
+<span class="dtg-service-number">
+05
+</span>
+
+
+<h3>
+Social Media Management
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-service-row"
+
+data-title="Admin & Digital Support"
+ data-link="#contact"
+ data-link-text="Discuss digital support ↗"
+
+data-text="I provide ongoing digital support including website updates, content management, and daily online tasks."
+
+data-image="https://images.unsplash.com/photo-1553877522-43269d4ea984">
+
+
+
+<span class="dtg-service-number">
+06
+</span>
+
+
+<h3>
+Admin & Digital Support
+</h3>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+const dtgRows = document.querySelectorAll(".dtg-service-row");
+
+
+const dtgImage = document.getElementById("dtgFeatureImage");
+
+const dtgTitle = document.getElementById("dtgFeatureTitle");
+
+const dtgText = document.getElementById("dtgFeatureText");
+const dtgFeatureLink = document.getElementById("dtgFeatureLink");
+
+
+
+
+dtgRows.forEach(row=>{
+
+
+row.addEventListener("click",()=>{
+
+
+    dtgRows.forEach(item=>{
+
+        item.classList.remove("active");
+
+    });
+
+
+    row.classList.add("active");
+
+
+
+    dtgImage.style.opacity="0";
+
+    dtgTitle.style.opacity="0";
+
+    dtgText.style.opacity="0";
+
+
+
+    setTimeout(()=>{
+
+
+        dtgImage.src = row.dataset.image;
+
+        dtgTitle.textContent = row.dataset.title;
+
+        dtgText.textContent = row.dataset.text;
+        if(dtgFeatureLink){
+            dtgFeatureLink.href = row.dataset.link || "#contact";
+            dtgFeatureLink.textContent = row.dataset.linkText || "Explore service ↗";
+        }
+
+
+
+        dtgImage.style.opacity="1";
+
+        dtgTitle.style.opacity="1";
+
+        dtgText.style.opacity="1";
+
+
+    },200);
+
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+<!-- OUR WORK SECTION -->
+
+<section class="dits-work-section" id="work">
+
+
+<div class="dits-work-container">
+
+
+<div class="dits-work-header">
+
+
+<p>
+INTERNATIONAL CLIENTS
+</p>
+
+
+<h2>
+Digital experiences built<br>
+for businesses worldwide
+</h2>
+
+
+<span>
+A collection of websites, platforms, and digital solutions
+created for businesses across different industries.
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="dits-work-grid">
+
+
+
+<!-- JIGSAW -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="jigsawdiscovery.png">
+</div>
+
+<h3>
+Jigsaw Discovery
+</h3>
+
+<p>
+An engaging digital experience designed to help users discover and explore.
+</p>
+
+<a href="https://jigsawdiscovery.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+<!-- FIND MY SHOE HOUSE -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="fmsh.png">
+</div>
+
+<h3>
+Find My Shoe House
+</h3>
+
+<p>
+A mortgage matching platform connecting customers with suitable home loan experts.
+</p>
+
+<a href="https://findmyshoehouse.com.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+<!-- LEVELS IT -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="lit.png">
+</div>
+
+<h3>
+Levels IT
+</h3>
+
+<p>
+A professional IT services website built to showcase technology solutions for businesses.
+</p>
+
+<a href="https://levelsit.com.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+<!-- ALLTOOSOCIAL -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="ats.png">
+</div>
+
+<h3>
+AllTooSocial
+</h3>
+
+<p>
+A modern digital presence focused on social media and online growth solutions.
+</p>
+
+<a href="https://alltoosocial.vercel.app/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+
+<!-- ALLIEDX -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="alliedx.png">
+</div>
+
+<h3>
+AlliedX
+</h3>
+
+<p>
+A technology-focused business website designed for professional digital solutions.
+</p>
+
+<a href="https://alliedx.com.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+
+<!-- CALLAUGHAN -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="cp.png">
+</div>
+
+<h3>
+Callaughan Partners
+</h3>
+
+<p>
+A professional accounting and advisory website built to strengthen trust and credibility.
+</p>
+
+<a href="https://www.callaughanpartners.com.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+
+<!-- PROLEC -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="prolecelect.png">
+</div>
+
+<h3>
+Prolec Electrical Innovations
+</h3>
+
+<p>
+A service-focused website designed to generate enquiries and showcase expertise.
+</p>
+
+<a href="https://prolecelectricalinnovations.com.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+
+<!-- HOMELEND -->
+
+<div class="dits-work-card">
+
+<div class="dits-work-image">
+<img src="hls.png">
+</div>
+
+<h3>
+HomeLend Solutions
+</h3>
+
+<p>
+A digital mortgage solution designed to simplify the lending journey and connect customers with better options.
+</p>
+
+<a href="https://homelendsolutions.com.au/" target="_blank">
+Visit Website ↗
+</a>
+
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+
+/* INTERNATIONAL CLIENT WORK */
+
+
+.dits-work-section{
+
+padding:140px 7%;
+
+background: #e9faff;
+
+color:#082b47;
+
+}
+
+
+
+.dits-work-container{
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+
+
+
+.dits-work-header{
+
+text-align:center;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+
+
+.dits-work-header p{
+
+font-size:13px;
+
+letter-spacing:4px;
+
+font-weight:700;
+
+color:#5b7fd6;
+
+}
+
+
+
+.dits-work-header h2{
+
+font-size:clamp(45px,5vw,70px);
+
+line-height:1.05;
+
+letter-spacing:-3px;
+
+font-weight:500;
+
+margin:25px 0;
+
+}
+
+
+
+.dits-work-header span{
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#536b82;
+
+}
+
+
+
+
+
+.dits-work-grid{
+
+margin-top:80px;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+
+
+.dits-work-card{
+
+background:#f5f7ff;
+
+border-radius:28px;
+
+padding:25px;
+
+overflow:hidden;
+
+border:1px solid #dde5f5;
+
+transition:.4s ease;
+
+}
+
+
+
+.dits-work-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+
+
+.dits-work-image{
+
+height:220px;
+
+overflow:hidden;
+
+border-radius:20px;
+
+background:#dce5f5;
+
+}
+
+
+
+.dits-work-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+
+
+.dits-work-card h3{
+
+font-size:30px;
+
+font-weight:500;
+
+letter-spacing:-1px;
+
+margin-top:25px;
+
+}
+
+
+
+.dits-work-card p{
+
+font-size:15px;
+
+line-height:1.6;
+
+color:#536b82;
+
+margin-top:15px;
+
+min-height:70px;
+
+}
+
+
+
+.dits-work-card a{
+
+display:inline-block;
+
+margin-top:25px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:#082b47;
+
+border-bottom:1px solid #082b47;
+
+padding-bottom:6px;
+
+}
+
+
+
+
+
+@media(max-width:1000px){
+
+.dits-work-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+</style>
+<!-- WHY CHOOSE DIGITECH SOLUTION -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Why Choose Digitech</title>
+
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+
+/* =====================================
+   WHY CHOOSE DIGITECH SECTION ONLY
+===================================== */
+
+
+.dtg-why-section{
+
+
+padding:140px 7%;
+
+
+background:#fff;
+
+
+color:#082b47;
+
+
+}
+
+
+
+.dtg-why-container{
+
+
+max-width:1400px;
+
+
+margin:auto;
+
+
+}
+
+
+
+
+
+/* HEADER */
+
+
+.dtg-why-header{
+
+
+max-width:900px;
+
+
+margin:auto;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.dtg-why-header p{
+
+
+font-size:13px;
+
+
+font-weight:700;
+
+
+letter-spacing:4px;
+
+
+color:#5b7fd6;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.dtg-why-header h2{
+
+
+font-size:clamp(45px,5vw,70px);
+
+
+font-weight:500;
+
+
+letter-spacing:-3px;
+
+
+line-height:1.05;
+
+
+margin-bottom:30px;
+
+
+}
+
+
+
+
+
+.dtg-why-header span{
+
+
+display:block;
+
+
+font-size:18px;
+
+
+line-height:1.7;
+
+
+color:#536b82;
+
+
+}
+
+
+
+
+
+/* CARDS */
+
+
+.dtg-why-grid{
+
+
+margin-top:80px;
+
+
+display:grid;
+
+
+grid-template-columns:repeat(4,1fr);
+
+
+gap:25px;
+
+
+}
+
+
+
+
+
+
+.dtg-why-card{
+
+
+padding:45px 30px;
+
+
+border-radius:28px;
+
+
+min-height:340px;
+
+
+text-align:center;
+
+
+transition:.35s ease;
+
+
+border:1px solid transparent;
+
+
+}
+
+
+
+
+
+.dtg-why-card:hover{
+
+
+transform:translateY(-10px);
+
+
+}
+
+
+
+
+
+/* CARD COLORS */
+
+
+.dtg-card-blue{
+
+
+background:#eef2ff;
+
+
+border-color:#d5ddff;
+
+
+}
+
+
+
+.dtg-card-green{
+
+
+background:#f3ffee;
+
+
+border-color:#d7f5c7;
+
+
+}
+
+
+
+.dtg-card-purple{
+
+
+background:#f8f1ff;
+
+
+border-color:#eadcff;
+
+
+}
+
+
+
+.dtg-card-orange{
+
+
+background:#fff7ed;
+
+
+border-color:#f7dfc1;
+
+
+}
+
+
+
+
+
+
+/* ICON */
+
+
+
+.dtg-why-icon{
+
+
+width:70px;
+
+
+height:70px;
+
+
+margin:0 auto 30px;
+
+
+background:white;
+
+
+border-radius:50%;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:28px;
+
+
+box-shadow:0 15px 35px rgba(8,43,71,.12);
+
+
+transition:.35s ease;
+
+
+}
+
+
+
+
+.dtg-why-card:hover .dtg-why-icon{
+
+
+transform:scale(1.1);
+
+
+}
+
+
+
+
+
+.dtg-card-blue .dtg-why-icon i{
+
+
+color:#5b7fd6;
+
+
+}
+
+
+
+.dtg-card-green .dtg-why-icon i{
+
+
+color:#62c94b;
+
+
+}
+
+
+
+.dtg-card-purple .dtg-why-icon i{
+
+
+color:#8b5cf6;
+
+
+}
+
+
+
+.dtg-card-orange .dtg-why-icon i{
+
+
+color:#f59e0b;
+
+
+}
+
+
+
+
+
+
+
+/* TEXT */
+
+
+.dtg-why-card h3{
+
+
+font-size:25px;
+
+
+font-weight:600;
+
+
+line-height:1.2;
+
+
+letter-spacing:-1px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.dtg-why-card p{
+
+
+font-size:15px;
+
+
+line-height:1.65;
+
+
+color:#536b82;
+
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:1100px){
+
+
+.dtg-why-grid{
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+}
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+.dtg-why-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.dtg-why-section{
+
+
+padding:90px 25px;
+
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<section class="dtg-why-section" id="why">
+
+
+<div class="dtg-why-container">
+
+
+
+
+
+<div class="dtg-why-header">
+
+
+<p>
+WHY CHOOSE DIGITECH SOLUTION
+</p>
+
+
+<h2>
+Digital solutions built around your business goals.
+</h2>
+
+
+<span>
+We combine strategy, technology, and creative thinking
+to create digital experiences that help businesses grow,
+connect with customers, and build trust online.
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dtg-why-grid">
+
+
+
+
+
+
+<div class="dtg-why-card dtg-card-blue">
+
+
+<div class="dtg-why-icon">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+
+
+<h3>
+Business-Focused Approach
+</h3>
+
+
+<p>
+We understand your goals and create digital solutions
+designed around your customers and business needs.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-why-card dtg-card-green">
+
+
+<div class="dtg-why-icon">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+</div>
+
+
+
+<h3>
+Modern Technology
+</h3>
+
+
+<p>
+We use modern tools, responsive development,
+and scalable solutions built for future growth.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-why-card dtg-card-purple">
+
+
+<div class="dtg-why-icon">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+</div>
+
+
+
+<h3>
+Design That Builds Trust
+</h3>
+
+
+<p>
+We create professional designs that make your brand
+credible, memorable, and easy to recognise.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dtg-why-card dtg-card-orange">
+
+
+<div class="dtg-why-icon">
+
+<i class="fa-solid fa-handshake"></i>
+
+</div>
+
+
+
+<h3>
+Long-Term Partnership
+</h3>
+
+
+<p>
+We continue supporting your business with improvements,
+updates, and digital solutions after launch.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+</body>
+</html>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="dits-contact-section" id="contact">
+
+    <div class="dits-contact-container">
+
+        <div class="dits-contact-content">
+
+            <p class="dits-contact-label">
+                LET'S BUILD SOMETHING GREAT
+            </p>
+
+            <h2>
+                Have a project<br>
+                in mind?
+            </h2>
+
+            <p class="dits-contact-intro">
+                Tell us what you need, what you are trying to achieve, and where
+                you need support. DigiTek Solutions will help you choose the right
+                digital approach for your business.
+            </p>
+
+            <div class="dits-contact-details">
+
+                <div class="dits-contact-detail">
+                    <span class="dits-contact-icon">01</span>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:hello@digiteksolutions.com">
+                            hello@digiteksolutions.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dits-contact-detail">
+                    <span class="dits-contact-icon">02</span>
+                    <div>
+                        <strong>Services</strong>
+                        <p>
+                            Web Development · Graphic Design · Email Marketing ·
+                            Workflow Automation · Digital Support
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dits-contact-detail">
+                    <span class="dits-contact-icon">03</span>
+                    <div>
+                        <strong>Availability</strong>
+                        <p>
+                            Working remotely with businesses worldwide
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="dits-contact-form">
+
+            <div class="dits-form-header">
+                <p>PROJECT ENQUIRY</p>
+                <h3>Start a conversation</h3>
+                <span>
+                    Complete the form and we will get back to you as soon as possible.
+                </span>
+            </div>
+
+            <form id="digitekContactForm" novalidate>
+
+                <div class="dits-form-row">
+
+                    <div class="dits-field">
+                        <label for="contactName">Your Name</label>
+                        <input
+                            id="contactName"
+                            name="name"
+                            type="text"
+                            placeholder="Jean Smith"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="dits-field">
+                        <label for="contactEmail">Email Address</label>
+                        <input
+                            id="contactEmail"
+                            name="email"
+                            type="email"
+                            placeholder="name@company.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="dits-form-row">
+
+                    <div class="dits-field">
+                        <label for="contactCompany">Company Name</label>
+                        <input
+                            id="contactCompany"
+                            name="company"
+                            type="text"
+                            placeholder="Your business name"
+                            autocomplete="organization"
+                        >
+                    </div>
+
+                    <div class="dits-field">
+                        <label for="contactService">Service Needed</label>
+                        <select id="contactService" name="service" required>
+                            <option value="" selected disabled>
+                                Select a service
+                            </option>
+                            <option>Website Design & Development</option>
+                            <option>Graphic Design</option>
+                            <option>Email Marketing</option>
+                            <option>Workflow Automations</option>
+                            <option>Social Media Management</option>
+                            <option>Admin & Digital Support</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="dits-field">
+                    <label for="contactBudget">Estimated Budget</label>
+                    <select id="contactBudget" name="budget">
+                        <option value="" selected disabled>
+                            Select a budget range
+                        </option>
+                        <option>Under $500</option>
+                        <option>$500 – $1,000</option>
+                        <option>$1,000 – $2,500</option>
+                        <option>$2,500 – $5,000</option>
+                        <option>$5,000+</option>
+                        <option>Not sure yet</option>
+                    </select>
+                </div>
+
+                <div class="dits-field">
+                    <label for="contactMessage">Tell us about your project</label>
+                    <textarea
+                        id="contactMessage"
+                        name="message"
+                        placeholder="What would you like to build, improve, or automate?"
+                        required
+                    ></textarea>
+                </div>
+
+                <label class="dits-consent">
+                    <input type="checkbox" required>
+                    <span>
+                        I agree to be contacted about this project enquiry.
+                    </span>
+                </label>
+
+                <button type="submit">
+                    <span>Send Project Enquiry</span>
+                    <span aria-hidden="true">↗</span>
+                </button>
+
+                <p class="dits-form-note">
+                    Clicking the button opens your email app with a completed message.
+                    Review it, then press Send.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+/* =========================================================
+   DIGITEK CONTACT SECTION
+========================================================= */
+
+.dits-contact-section{
+    padding:145px 7%;
+    background:#dfe8ff;
+    color:#082b47;
+}
+
+.dits-contact-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:minmax(0, .9fr) minmax(520px, 1.1fr);
+    gap:90px;
+    align-items:start;
+}
+
+.dits-contact-content{
+    position:sticky;
+    top:135px;
+}
+
+.dits-contact-label{
+    margin-bottom:26px;
+    color:#5b7fd6;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:3.5px;
+}
+
+.dits-contact-content h2{
+    margin:0;
+    max-width:650px;
+    font-size:clamp(54px,5.5vw,88px);
+    line-height:.98;
+    letter-spacing:-4.5px;
+    font-weight:500;
+}
+
+.dits-contact-intro{
+    max-width:620px;
+    margin-top:34px;
+    color:#496276;
+    font-size:18px;
+    line-height:1.75;
+}
+
+.dits-contact-details{
+    margin-top:52px;
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid rgba(8,43,71,.16);
+}
+
+.dits-contact-detail{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:18px;
+    padding:24px 0;
+    border-bottom:1px solid rgba(8,43,71,.16);
+}
+
+.dits-contact-icon{
+    color:#5b7fd6;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.dits-contact-detail strong{
+    display:block;
+    margin-bottom:7px;
+    color:#082b47;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.dits-contact-detail p,
+.dits-contact-detail a{
+    color:#496276;
+    font-size:15px;
+    line-height:1.6;
+    text-decoration:none;
+}
+
+.dits-contact-detail a:hover{
+    color:#5b7fd6;
+}
+
+.dits-contact-form{
+    padding:48px;
+    border:1px solid rgba(8,43,71,.09);
+    border-radius:34px;
+    background:#ffffff;
+    color:#082b47;
+    box-shadow:0 28px 80px rgba(8,43,71,.1);
+}
+
+.dits-form-header{
+    margin-bottom:34px;
+}
+
+.dits-form-header > p{
+    margin-bottom:14px;
+    color:#5b7fd6;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.dits-form-header h3{
+    margin:0;
+    font-size:clamp(34px,3vw,46px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    font-weight:500;
+}
+
+.dits-form-header span{
+    display:block;
+    max-width:520px;
+    margin-top:15px;
+    color:#667a8d;
+    font-size:15px;
+    line-height:1.65;
+}
+
+.dits-contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.dits-form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.dits-field{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.dits-field label{
+    color:#193b57;
+    font-size:13px;
+    font-weight:700;
+}
+
+.dits-field input,
+.dits-field select,
+.dits-field textarea{
+    width:100%;
+    min-height:56px;
+    padding:15px 17px;
+    border:1px solid #dce5f0;
+    border-radius:12px;
+    background:#f9fbff;
+    color:#082b47;
+    font-family:inherit;
+    font-size:15px;
+    line-height:1.4;
+    outline:none;
+    transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.dits-field input::placeholder,
+.dits-field textarea::placeholder{
+    color:#93a2b0;
+}
+
+.dits-field input:focus,
+.dits-field select:focus,
+.dits-field textarea:focus{
+    border-color:#5b7fd6;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(91,127,214,.12);
+}
+
+.dits-field textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.dits-consent{
+    display:flex;
+    align-items:flex-start;
+    gap:11px;
+    color:#667a8d;
+    font-size:13px;
+    line-height:1.5;
+    cursor:pointer;
+}
+
+.dits-consent input{
+    width:17px;
+    height:17px;
+    margin-top:1px;
+    accent-color:#5b7fd6;
+    flex:0 0 auto;
+}
+
+.dits-contact-form button{
+    min-height:58px;
+    padding:0 22px;
+    border:0;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#082b47;
+    color:#fff;
+    font-family:inherit;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:transform .22s ease, background .22s ease, box-shadow .22s ease;
+}
+
+.dits-contact-form button:hover{
+    transform:translateY(-2px);
+    background:#5b7fd6;
+    box-shadow:0 14px 30px rgba(91,127,214,.25);
+}
+
+.dits-form-note{
+    margin:0;
+    text-align:center;
+    color:#8797a6;
+    font-size:12px;
+    line-height:1.5;
+}
+
+@media(max-width:1050px){
+
+    .dits-contact-container{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .dits-contact-content{
+        position:relative;
+        top:auto;
+    }
+}
+
+@media(max-width:700px){
+
+    .dits-contact-section{
+        padding:92px 20px;
+    }
+
+    .dits-contact-content h2{
+        font-size:clamp(45px,13vw,62px);
+        letter-spacing:-3px;
+    }
+
+    .dits-contact-intro{
+        font-size:16px;
+    }
+
+    .dits-contact-form{
+        padding:27px 20px;
+        border-radius:24px;
+    }
+
+    .dits-form-row{
+        grid-template-columns:1fr;
+    }
+
+    .dits-form-header h3{
+        font-size:34px;
+    }
+
+    .dits-field input,
+    .dits-field select,
+    .dits-field textarea{
+        font-size:16px;
+    }
+}
+</style>
+
+
+
+
+<style>
+    /* =================================================
+   DIGITECH FULL MOBILE OPTIMIZATION
+   ADD AT THE END OF CSS
+================================================= */
+
+
+@media(max-width:900px){
+
+
+/* GLOBAL */
+
+body{
+    overflow-x:hidden;
+}
+
+
+section{
+    overflow:hidden;
+}
+
+
+
+/* =========================
+HEADER
+========================= */
+
+header{
+
+    height:78px;
+    padding:0 22px;
+
+}
+
+
+.logo img{
+
+    width:120px;
+
+}
+
+
+nav{
+
+    display:none;
+
+}
+
+
+
+/* =========================
+HERO
+========================= */
+
+
+.hero{
+
+    width:100%;
+    padding:120px 25px 80px;
+    min-height:100vh;
+
+}
+
+
+h1{
+
+    font-size:clamp(55px,15vw,75px);
+
+    letter-spacing:-1px;
+
+}
+
+
+.description{
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin-top:30px;
+
+}
+
+
+.btn{
+
+    padding:17px 28px;
+
+    width:100%;
+
+}
+
+
+
+
+
+/* =========================
+ABOUT
+========================= */
+
+
+.about-section{
+
+    padding:90px 25px;
+
+}
+
+
+.about-statement{
+
+    font-size:38px;
+
+    letter-spacing:-2px;
+
+}
+
+
+.about-bottom{
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+
+.about-copy{
+
+    font-size:16px;
+
+}
+
+
+
+
+
+/* =========================
+SERVICES CARDS
+========================= */
+
+
+.dits-services-section{
+
+    padding:90px 25px;
+
+}
+
+
+.dits-layout{
+
+    display:block;
+
+}
+
+
+.dits-side{
+
+    margin-top:25px;
+
+}
+
+
+.dits-card{
+
+    padding:30px;
+
+    border-radius:25px;
+
+}
+
+
+
+.dits-web{
+
+    min-height:650px;
+
+}
+
+
+
+.dits-web h2,
+.dits-marketing h2,
+.dits-brand h2{
+
+    font-size:45px;
+
+    letter-spacing:-2px;
+
+}
+
+
+
+.dits-text{
+
+    font-size:16px;
+
+}
+
+
+
+.dits-tags{
+
+    gap:8px;
+
+}
+
+
+.dits-tags span{
+
+    font-size:12px;
+
+    padding:9px 14px;
+
+}
+
+
+
+
+
+/* Browser mockup */
+
+.dits-browser{
+
+    width:450px;
+
+    height:300px;
+
+    right:-180px;
+
+    bottom:-80px;
+
+}
+
+
+
+.dits-browser-content{
+
+    padding:25px;
+
+}
+
+
+
+
+
+
+/* MARKETING */
+
+.dits-marketing{
+
+    height:430px;
+
+}
+
+
+.dits-marketing .dits-button{
+
+    left:30px;
+
+    bottom:140px;
+
+}
+
+
+
+.dits-chart{
+
+    left:20px;
+
+    right:20px;
+
+}
+
+
+
+.dits-growth{
+
+    padding:14px 20px;
+
+}
+
+
+
+.dits-growth strong{
+
+    font-size:28px;
+
+}
+
+
+
+
+
+/* =========================
+SERVICE LIST
+========================= */
+
+
+.dtg-services-wrapper{
+
+    padding:90px 25px;
+
+}
+
+
+.dtg-services-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:50px;
+
+}
+
+
+.dtg-feature-box img{
+
+    height:230px;
+
+    border-radius:25px;
+
+}
+
+
+.dtg-feature-box h2{
+
+    font-size:36px;
+
+}
+
+
+.dtg-feature-box p{
+
+    font-size:16px;
+
+}
+
+
+
+.dtg-service-row{
+
+    gap:15px;
+
+    padding:25px 0;
+
+}
+
+
+
+.dtg-service-row h3{
+
+    font-size:32px;
+
+}
+
+
+
+.dtg-service-number{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* =========================
+CLIENT WORK
+========================= */
+
+
+.dits-work-section{
+
+    padding:90px 25px;
+
+}
+
+
+.dits-work-header h2{
+
+    font-size:40px;
+
+}
+
+
+.dits-work-header span{
+
+    font-size:16px;
+
+}
+
+
+
+.dits-work-grid{
+
+    grid-template-columns:1fr;
+
+    margin-top:50px;
+
+}
+
+
+.dits-work-card{
+
+    padding:20px;
+
+}
+
+
+
+.dits-work-card h3{
+
+    font-size:25px;
+
+}
+
+
+.dits-work-image{
+
+    height:190px;
+
+}
+
+
+
+
+
+/* =========================
+WHY CHOOSE
+========================= */
+
+
+.dtg-why-section{
+
+    padding:90px 25px;
+
+}
+
+
+.dtg-why-header h2{
+
+    font-size:40px;
+
+}
+
+
+.dtg-why-header span{
+
+    font-size:16px;
+
+}
+
+
+
+.dtg-why-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+
+
+.dtg-why-card{
+
+    min-height:auto;
+
+    padding:35px 25px;
+
+}
+
+
+
+.dtg-why-card h3{
+
+    font-size:24px;
+
+}
+
+
+
+
+
+/* =========================
+CONTACT
+========================= */
+
+
+.dits-contact-section{
+
+    padding:90px 25px;
+
+}
+
+
+
+.dits-contact-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+
+}
+
+
+
+.dits-contact-content h2{
+
+    font-size:42px;
+
+    letter-spacing:-2px;
+
+}
+
+
+
+.dits-contact-content>p{
+
+    font-size:16px;
+
+}
+
+
+
+.dits-contact-form{
+
+    padding:25px;
+
+    border-radius:25px;
+
+}
+
+
+
+.dits-contact-form h3{
+
+    font-size:30px;
+
+}
+
+
+
+.dits-contact-form input,
+.dits-contact-form select,
+.dits-contact-form textarea{
+
+    padding:16px;
+
+}
+
+
+
+}
+
+
+
+
+/* SMALL PHONES */
+
+@media(max-width:480px){
+
+
+h1{
+
+    font-size:52px;
+
+}
+
+
+.about-statement{
+
+    font-size:32px;
+
+}
+
+
+.dtg-service-row h3{
+
+    font-size:27px;
+
+}
+
+
+.dits-browser{
+
+    width:350px;
+
+}
+
+
+.dits-growth{
+
+    right:10px;
+
+}
+
+
+
+}
+</style>
+
+
+<style>
+/* =========================================================
+   FINAL RESPONSIVE HEADER + MOBILE MENU OVERRIDES
+========================================================= */
+
+html{
+    scroll-padding-top:105px;
+}
+
+.dtg-menu-toggle{
+    appearance:none;
+    -webkit-appearance:none;
+    padding:0;
+    border:0;
+    background:transparent;
+}
+
+.dtg-mobile-menu{
+    display:none;
+}
+
+/* Keep section targets visible below the fixed header */
+#about,
+#services,
+#work,
+#why,
+#contact{
+    scroll-margin-top:105px;
+}
+
+@media(max-width:900px){
+
+    html{
+        scroll-padding-top:78px;
+    }
+
+    body.menu-open{
+        overflow:hidden;
+    }
+
+    header{
+        height:78px;
+        padding:0 20px;
+        z-index:10000;
+    }
+
+    .logo{
+        position:relative;
+        z-index:10002;
+        padding:0;
+    }
+
+    .logo img{
+        width:118px;
+        max-width:32vw;
+        height:auto;
+    }
+
+    header > nav{
+        display:none !important;
+    }
+
+    .dtg-menu-toggle{
+        display:flex !important;
+        position:relative;
+        z-index:10002;
+        width:44px;
+        height:44px;
+        flex:0 0 44px;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        gap:6px;
+        cursor:pointer;
+    }
+
+    .dtg-menu-toggle span{
+        display:block;
+        width:27px;
+        height:2px;
+        border-radius:999px;
+        background:#fff;
+        transform-origin:center;
+        transition:transform .25s ease, opacity .2s ease, background .25s ease;
+    }
+
+    header.scrolled .dtg-menu-toggle span,
+    header.menu-active .dtg-menu-toggle span{
+        background:#082b47;
+    }
+
+    .dtg-menu-toggle.active span:nth-child(1){
+        transform:translateY(8px) rotate(45deg);
+    }
+
+    .dtg-menu-toggle.active span:nth-child(2){
+        opacity:0;
+    }
+
+    .dtg-menu-toggle.active span:nth-child(3){
+        transform:translateY(-8px) rotate(-45deg);
+    }
+
+    .dtg-mobile-menu{
+        position:fixed;
+        top:78px;
+        left:0;
+        right:0;
+        z-index:9999;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:18px 20px 28px;
+        background:#fff;
+        border-top:1px solid #e4e9f2;
+        box-shadow:0 22px 55px rgba(8,43,71,.16);
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(-14px);
+        transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+
+    .dtg-mobile-menu.active{
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:translateY(0);
+    }
+
+    .dtg-mobile-menu a{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        min-height:58px;
+        padding:0 4px;
+        color:#082b47;
+        text-decoration:none;
+        font-size:17px;
+        font-weight:700;
+        border-bottom:1px solid #e8edf4;
+    }
+
+    .dtg-mobile-menu a::after{
+        content:"↗";
+        font-size:18px;
+        font-weight:500;
+    }
+
+    .dtg-mobile-menu .dtg-mobile-cta{
+        justify-content:center;
+        margin-top:18px;
+        min-height:54px;
+        padding:0 24px;
+        color:#fff;
+        background:#082b47;
+        border:0;
+        border-radius:12px;
+    }
+
+    .dtg-mobile-menu .dtg-mobile-cta::after{
+        display:none;
+    }
+
+    .hero{
+        width:100%;
+        min-height:100svh;
+        padding:118px 22px 72px;
+    }
+
+    .hero .content{
+        max-width:680px;
+    }
+
+    h1{
+        font-size:clamp(52px,16vw,76px);
+        line-height:.98;
+        letter-spacing:-1px;
+    }
+
+    .description{
+        max-width:560px;
+        margin-top:30px;
+        font-size:16px;
+        line-height:1.65;
+    }
+
+    .cta{
+        margin-top:32px;
+    }
+
+    .btn{
+        width:auto;
+        max-width:100%;
+        padding:17px 26px;
+        font-size:14px;
+    }
+
+    #about,
+    #services,
+    #work,
+    #why,
+    #contact{
+        scroll-margin-top:78px;
+    }
+}
+
+@media(max-width:520px){
+
+    header{
+        padding:0 16px;
+    }
+
+    .logo img{
+        width:108px;
+    }
+
+    .hero{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    h1{
+        font-size:clamp(48px,17vw,66px);
+    }
+
+    .description{
+        font-size:15px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .dits-card,
+    .dtg-why-card,
+    .dits-contact-form,
+    .dits-work-card{
+        border-radius:22px;
+    }
+}
+</style>
+
+
+<script>
+(function () {
+    const header = document.querySelector("header");
+    const toggle = document.getElementById("dtgMenuToggle");
+    const menu = document.getElementById("dtgMobileMenu");
+
+    if (!toggle || !menu) return;
+
+    function setMenu(open) {
+        toggle.classList.toggle("active", open);
+        menu.classList.toggle("active", open);
+        header?.classList.toggle("menu-active", open);
+        document.body.classList.toggle("menu-open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+        menu.setAttribute("aria-hidden", String(!open));
+    }
+
+    toggle.addEventListener("click", function () {
+        setMenu(!menu.classList.contains("active"));
+    });
+
+    menu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (!target) return;
+
+            event.preventDefault();
+            setMenu(false);
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+                top: Math.max(0, top),
+                behavior: "smooth"
+            });
+        });
+    });
+
+    document.querySelectorAll('header nav a[href^="#"], .hero a[href^="#"], .about-link[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (!target) return;
+
+            event.preventDefault();
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+                top: Math.max(0, top),
+                behavior: "smooth"
+            });
+        });
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") setMenu(false);
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) setMenu(false);
+    });
+})();
+</script>
+
+<style>
+/* =========================================================
+   FINAL MOBILE HERO FIX
+========================================================= */
+
+@media (max-width:900px){
+
+    .hero{
+        width:100% !important;
+        min-height:100svh !important;
+        padding:98px 22px 42px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        text-align:center !important;
+    }
+
+    .hero .content{
+        width:100% !important;
+        max-width:520px !important;
+        margin:0 auto !important;
+        transform:translateY(-12px);
+    }
+
+    .hero h1{
+        margin:0 !important;
+        font-size:clamp(54px,15.5vw,72px) !important;
+        line-height:.91 !important;
+        letter-spacing:-1px !important;
+    }
+
+    .hero .description{
+        max-width:390px !important;
+        margin:30px auto 0 !important;
+        font-size:15.5px !important;
+        line-height:1.55 !important;
+    }
+
+    .hero .cta{
+        width:100% !important;
+        margin-top:30px !important;
+    }
+
+    .hero .btn{
+        width:100% !important;
+        max-width:390px !important;
+        padding:17px 24px !important;
+        border-radius:14px !important;
+        font-size:14px !important;
+        text-align:center !important;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero{
+        min-height:calc(100svh - 1px) !important;
+        padding:92px 17px 32px !important;
+    }
+
+    .hero .content{
+        transform:translateY(-8px);
+    }
+
+    .hero h1{
+        font-size:clamp(51px,16vw,64px) !important;
+        line-height:.92 !important;
+    }
+
+    .hero .description{
+        max-width:360px !important;
+        margin-top:27px !important;
+        font-size:15px !important;
+        line-height:1.55 !important;
+    }
+
+    .hero .cta{
+        margin-top:27px !important;
+    }
+
+    .hero .btn{
+        max-width:100% !important;
+        padding:16px 20px !important;
+    }
+}
+
+@media (max-width:380px){
+
+    .hero{
+        padding-top:88px !important;
+        padding-bottom:28px !important;
+    }
+
+    .hero h1{
+        font-size:48px !important;
+    }
+
+    .hero .description{
+        font-size:14px !important;
+    }
+}
+</style>
+
+<style>
+/* =========================================================
+   MOBILE WEB DEVELOPMENT CTA VISIBILITY FIX
+========================================================= */
+@media (max-width:900px){
+    .dits-web{
+        min-height:720px !important;
+        padding-bottom:250px !important;
+    }
+
+    .dits-web .dits-button{
+        position:relative !important;
+        left:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+        z-index:20 !important;
+        display:inline-flex !important;
+        align-items:center !important;
+        max-width:100% !important;
+        margin-top:28px !important;
+        padding-bottom:7px !important;
+        white-space:normal !important;
+        line-height:1.35 !important;
+    }
+
+    .dits-web .dits-browser{
+        right:-145px !important;
+        bottom:-55px !important;
+        width:410px !important;
+        height:265px !important;
+        z-index:5 !important;
+    }
+}
+
+@media (max-width:480px){
+    .dits-web{
+        min-height:690px !important;
+        padding:30px 30px 235px !important;
+    }
+
+    .dits-web .dits-button{
+        width:fit-content !important;
+        max-width:calc(100% - 10px) !important;
+        font-size:15px !important;
+    }
+
+    .dits-web .dits-browser{
+        width:360px !important;
+        height:235px !important;
+        right:-120px !important;
+        bottom:-45px !important;
+    }
+}
+
+@media (max-width:380px){
+    .dits-web{
+        min-height:700px !important;
+        padding-left:25px !important;
+        padding-right:25px !important;
+    }
+
+    .dits-web .dits-browser{
+        right:-135px !important;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   MOBILE OUR WORK — HORIZONTAL SWIPE CARDS
+========================================================= */
+
+@media (max-width:900px){
+
+    .dits-work-section{
+        padding-left:0 !important;
+        padding-right:0 !important;
+        overflow:hidden !important;
+    }
+
+    .dits-work-container{
+        max-width:none !important;
+        width:100% !important;
+    }
+
+    .dits-work-header{
+        padding:0 22px !important;
+    }
+
+    .dits-work-grid{
+        display:flex !important;
+        grid-template-columns:none !important;
+        gap:16px !important;
+        margin-top:48px !important;
+        padding:0 22px 18px !important;
+        overflow-x:auto !important;
+        overflow-y:hidden !important;
+        scroll-snap-type:x mandatory !important;
+        scroll-padding-left:22px !important;
+        -webkit-overflow-scrolling:touch !important;
+        overscroll-behavior-inline:contain !important;
+        scrollbar-width:none !important;
+    }
+
+    .dits-work-grid::-webkit-scrollbar{
+        display:none !important;
+    }
+
+    .dits-work-card{
+        flex:0 0 84vw !important;
+        width:84vw !important;
+        max-width:340px !important;
+        min-height:420px !important;
+        scroll-snap-align:start !important;
+        scroll-snap-stop:always !important;
+        margin:0 !important;
+    }
+
+    .dits-work-image{
+        height:190px !important;
+    }
+
+    .dits-work-card p{
+        min-height:auto !important;
+    }
+}
+
+@media (max-width:480px){
+
+    .dits-work-header{
+        padding:0 18px !important;
+    }
+
+    .dits-work-grid{
+        padding-left:18px !important;
+        padding-right:18px !important;
+        scroll-padding-left:18px !important;
+    }
+
+    .dits-work-card{
+        flex-basis:86vw !important;
+        width:86vw !important;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   MOBILE OUR WORK — SWIPE INDICATOR + NEXT CARD PEEK
+========================================================= */
+
+@media (max-width:900px){
+
+    .dits-work-header::after{
+        content:"Swipe to explore  →";
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        margin-top:24px;
+        padding:10px 16px;
+        border:1px solid rgba(91,127,214,.35);
+        border-radius:999px;
+        color:#5b7fd6;
+        background:rgba(255,255,255,.55);
+        font-size:12px;
+        font-weight:700;
+        letter-spacing:1.5px;
+        text-transform:uppercase;
+    }
+
+    .dits-work-grid{
+        padding-right:42px !important;
+    }
+
+    .dits-work-card{
+        flex:0 0 76vw !important;
+        width:76vw !important;
+        max-width:330px !important;
+    }
+
+    .dits-work-section{
+        position:relative;
+    }
+
+    .dits-work-section::after{
+        content:"";
+        position:absolute;
+        right:0;
+        bottom:18px;
+        width:44px;
+        height:430px;
+        pointer-events:none;
+        background:linear-gradient(
+            to left,
+            rgba(233,250,255,.95),
+            rgba(233,250,255,0)
+        );
+    }
+}
+
+@media (max-width:480px){
+
+    .dits-work-card{
+        flex-basis:78vw !important;
+        width:78vw !important;
+    }
+
+    .dits-work-header::after{
+        margin-top:20px;
+        font-size:11px;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   FINAL MOBILE HERO — BIGGER HEADING, LESS EMPTY SPACE
+========================================================= */
+
+@media (max-width:900px){
+
+    .hero{
+        min-height:auto !important;
+        padding:112px 18px 58px !important;
+        display:flex !important;
+        align-items:flex-start !important;
+        justify-content:center !important;
+    }
+
+    .hero .content{
+        max-width:520px !important;
+        margin:0 auto !important;
+        transform:none !important;
+    }
+
+    .hero h1{
+        font-size:clamp(64px,18vw,86px) !important;
+        line-height:.88 !important;
+        letter-spacing:-1.5px !important;
+        margin:0 !important;
+    }
+
+    .hero .description{
+        max-width:390px !important;
+        margin:28px auto 0 !important;
+        font-size:15.5px !important;
+        line-height:1.5 !important;
+    }
+
+    .hero .cta{
+        margin-top:26px !important;
+    }
+
+    .hero .btn{
+        width:100% !important;
+        max-width:390px !important;
+        padding:16px 22px !important;
+        border-radius:14px !important;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero{
+        padding:104px 16px 48px !important;
+    }
+
+    .hero h1{
+        font-size:clamp(62px,18.5vw,78px) !important;
+        line-height:.87 !important;
+    }
+
+    .hero .description{
+        margin-top:24px !important;
+        font-size:15px !important;
+        line-height:1.48 !important;
+    }
+
+    .hero .cta{
+        margin-top:23px !important;
+    }
+}
+
+@media (max-width:380px){
+
+    .hero{
+        padding-top:98px !important;
+        padding-bottom:42px !important;
+    }
+
+    .hero h1{
+        font-size:58px !important;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   MOBILE HERO — EXTRA BREATHING ROOM + HEADING LINE SPACING
+========================================================= */
+
+@media (max-width:900px){
+
+    .hero{
+        padding-top:122px !important;
+        padding-bottom:62px !important;
+    }
+
+    .hero h1{
+        line-height:.95 !important;
+    }
+
+    .hero .description{
+        margin-top:34px !important;
+    }
+
+    .hero .cta{
+        margin-top:30px !important;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero{
+        padding-top:114px !important;
+        padding-bottom:56px !important;
+    }
+
+    .hero h1{
+        line-height:.94 !important;
+    }
+
+    .hero .description{
+        margin-top:30px !important;
+    }
+
+    .hero .cta{
+        margin-top:27px !important;
+    }
+}
+</style>
+
+<script>
+(function(){
+    const header = document.querySelector("header");
+    const serviceLinks = document.querySelectorAll('a[href="#services-detail"]');
+
+    serviceLinks.forEach(function(link){
+        link.addEventListener("click", function(event){
+            const target = document.getElementById("services-detail");
+            if(!target) return;
+
+            event.preventDefault();
+
+            const mobileMenu = document.getElementById("dtgMobileMenu");
+            const menuToggle = document.getElementById("dtgMenuToggle");
+
+            if(mobileMenu){
+                mobileMenu.classList.remove("active");
+                mobileMenu.setAttribute("aria-hidden", "true");
+            }
+
+            if(menuToggle){
+                menuToggle.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+
+            document.body.classList.remove("menu-open");
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const targetTop =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+            window.scrollTo({
+                top: Math.max(0, targetTop),
+                behavior: "smooth"
+            });
+        });
+    });
+})();
+</script>
+
+
+<style>
+#services-detail{
+    scroll-margin-top:105px;
+}
+
+@media(max-width:900px){
+    #services-detail{
+        scroll-margin-top:78px;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   DIGITEK FOUNDER ABOUT SECTION
+========================================================= */
+
+.about-section{
+    padding:145px 7%;
+    background:#ffffff;
+    color:#082b47;
+}
+
+.about-inner{
+    max-width:1500px;
+    margin:auto;
+}
+
+.about-founder-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1.2fr) minmax(340px,.58fr);
+    gap:85px;
+    align-items:start;
+}
+
+.about-founder-copy{
+    min-width:0;
+}
+
+.about-statement{
+    max-width:1050px;
+    margin:0;
+    font-size:clamp(48px,4.25vw,76px);
+    line-height:1.12;
+    letter-spacing:-3.5px;
+    font-weight:400;
+}
+
+.about-intro{
+    max-width:820px;
+    margin-top:48px;
+    padding-top:38px;
+    border-top:1px solid #dce3ec;
+    color:#496276;
+    font-size:19px;
+    line-height:1.75;
+}
+
+.about-founder-note{
+    max-width:760px;
+    margin-top:70px;
+}
+
+.about-founder-kicker{
+    margin-bottom:20px;
+    color:#5b7fd6;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.about-founder-note h3{
+    max-width:650px;
+    margin:0;
+    font-size:clamp(30px,2.5vw,44px);
+    line-height:1.12;
+    letter-spacing:-2px;
+    font-weight:500;
+}
+
+.about-founder-note > p:not(.about-founder-kicker){
+    max-width:680px;
+    margin-top:24px;
+    color:#536b82;
+    font-size:17px;
+    line-height:1.75;
+}
+
+.about-founder-visual{
+    position:sticky;
+    top:135px;
+}
+
+.about-founder-image{
+    overflow:hidden;
+    min-height:610px;
+    border-radius:0 42px 42px 42px;
+    background:#eef2ff;
+}
+
+.about-founder-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    min-height:610px;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.about-founder-card{
+    position:relative;
+    width:calc(100% - 44px);
+    margin:-78px auto 0;
+    padding:28px 30px;
+    border:1px solid #dce5f5;
+    border-radius:22px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 20px 50px rgba(8,43,71,.12);
+    backdrop-filter:blur(12px);
+}
+
+.about-founder-card span{
+    display:block;
+    margin-bottom:12px;
+    color:#5b7fd6;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.about-founder-card strong{
+    display:block;
+    font-size:25px;
+    font-weight:600;
+    letter-spacing:-1px;
+}
+
+.about-founder-card p{
+    margin-top:10px;
+    color:#536b82;
+    font-size:14px;
+    line-height:1.55;
+}
+
+@media(max-width:1000px){
+
+    .about-founder-layout{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .about-founder-visual{
+        position:relative;
+        top:auto;
+        max-width:620px;
+    }
+
+    .about-founder-image,
+    .about-founder-image img{
+        min-height:520px;
+    }
+}
+
+@media(max-width:700px){
+
+    .about-section{
+        padding:95px 22px;
+    }
+
+    .about-founder-layout{
+        gap:45px;
+    }
+
+    .about-statement{
+        font-size:clamp(37px,10vw,52px);
+        line-height:1.12;
+        letter-spacing:-2px;
+    }
+
+    .about-intro{
+        margin-top:36px;
+        padding-top:30px;
+        font-size:16px;
+    }
+
+    .about-founder-note{
+        margin-top:52px;
+    }
+
+    .about-founder-note h3{
+        font-size:31px;
+    }
+
+    .about-founder-note > p:not(.about-founder-kicker){
+        font-size:16px;
+    }
+
+    .about-founder-image,
+    .about-founder-image img{
+        min-height:460px;
+    }
+
+    .about-founder-card{
+        width:calc(100% - 26px);
+        margin-top:-58px;
+        padding:23px;
+    }
+}
+</style>
+
+<script>
+(function(){
+    const header = document.querySelector("header");
+
+    document.addEventListener("click", function(event){
+        const link = event.target.closest('a[href="#work"]');
+        if(!link) return;
+
+        const target = document.getElementById("work");
+        if(!target) return;
+
+        event.preventDefault();
+
+        const mobileMenu = document.getElementById("dtgMobileMenu");
+        const menuToggle = document.getElementById("dtgMenuToggle");
+
+        if(mobileMenu){
+            mobileMenu.classList.remove("active");
+            mobileMenu.setAttribute("aria-hidden", "true");
+        }
+
+        if(menuToggle){
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+
+        document.body.classList.remove("menu-open");
+
+        const offset = header ? header.offsetHeight : 0;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+            top: Math.max(0, top),
+            behavior: "smooth"
+        });
+    });
+})();
+</script>
+
+
+<style>
+#work{
+    scroll-margin-top:105px;
+}
+
+@media(max-width:900px){
+    #work{
+        scroll-margin-top:78px;
+    }
+}
+</style>
+
+<script>
+/* DIGITEK MAILTO CONTACT FORM */
+(function () {
+    const form = document.getElementById("digitekContactForm");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const name = document.getElementById("contactName")?.value.trim() || "";
+        const email = document.getElementById("contactEmail")?.value.trim() || "";
+        const company = document.getElementById("contactCompany")?.value.trim() || "Not provided";
+        const service = document.getElementById("contactService")?.value || "Not selected";
+        const budget = document.getElementById("contactBudget")?.value || "Not selected";
+        const message = document.getElementById("contactMessage")?.value.trim() || "";
+
+        const subject = `New DigiTek Project Enquiry — ${service}`;
+
+        const body = [
+            "Hello Jeanette,",
+            "",
+            "I would like to enquire about a project with DigiTek Solutions.",
+            "",
+            `Name: ${name}`,
+            `Email: ${email}`,
+            `Company: ${company}`,
+            `Service needed: ${service}`,
+            `Estimated budget: ${budget}`,
+            "",
+            "Project details:",
+            message,
+            "",
+            "Please contact me using the email address above.",
+            "",
+            "Thank you."
+        ].join("\n");
+
+        const mailto =
+            "mailto:hello@digiteksolutions.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+
+        window.location.href = mailto;
+    });
+})();
+</script>
